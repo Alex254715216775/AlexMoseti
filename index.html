@@ -408,16 +408,25 @@
   <div class="loader-logo">Alex Moseti</div>
 </div>
 
-<!-- Hero Section -->
-<section id="hero" class="hidden">
-  <h1>Hello, I'm Alex 👋</h1>
-  <p>Cybersecurity | AI | Web Development | UI/UX</p>
-  <a href="#projects" class="hero-btn">Explore My Work</a>
-</section>
+  <script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    const hero = document.getElementById("hero");
 
-  
+    setTimeout(() => {
+      loader.classList.add("exit"); 
+      setTimeout(() => {
+        loader.style.display = "none"; 
+        hero.classList.add("show");    
+        hero.classList.remove("hidden");
+      }, 1000);
+    }, 2500); // show loader for ~2.5s
+  });
+</script>
+
 
 </body>
 </html>
+
 
 
