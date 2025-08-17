@@ -398,27 +398,26 @@
   <!-- External JavaScript -->
   <script src="index.js"></script>
 
-  <!-- Loader -->
+<!-- Loader -->
 <div id="loader">
-  <div class="loader-logo">Alex Moseti</div>
-  <div class="progress-bar">
-    <span></span>
+  <div class="orbit">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
   </div>
-  <p class="loader-text">Preparing your experience...</p>
+  <div class="loader-logo">Alex Moseti</div>
 </div>
 
-<script>
-  window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
+<!-- Hero Section -->
+<section id="hero" class="hidden">
+  <h1>Hello, I'm Alex 👋</h1>
+  <p>Cybersecurity | AI | Web Development | UI/UX</p>
+  <a href="#projects" class="hero-btn">Explore My Work</a>
+</section>
 
-    // Wait for progress bar to complete
-    setTimeout(() => {
-      loader.classList.add("hidden");
-    }, 3500); // matches progress bar duration
-  });
-</script>
   
 
 </body>
 </html>
+
 
