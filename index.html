@@ -400,8 +400,12 @@
 
 <!-- Loader -->
 <div id="loader">
-  <div class="wave"></div>
-  <h1 class="loader-text">Loading...</h1>
+  <div class="typing-loader">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <p class="loader-text">Loading Portfolio...</p>
 </div>
 
   <script>
@@ -416,7 +420,7 @@
         hero.classList.add("show");    
         hero.classList.remove("hidden");
       }, 1000);
-    }, 3000); // show wave loader for 3s
+    }, 2500); // typing dots show for ~2.5s
   });
 </script>
 
@@ -424,6 +428,7 @@
 
 </body>
 </html>
+
 
 
 
