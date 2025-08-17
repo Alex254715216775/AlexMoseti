@@ -982,43 +982,50 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
   z-index: 9999;
   transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
-/* Wave Shape */
-.wave {
-  position: absolute;
-  bottom: -60px;
-  left: 0;
-  width: 200%;
-  height: 200px;
-  background: #38bdf8;
-  border-radius: 50%;
-  animation: wave 4s linear infinite;
-  opacity: 0.8;
+/* Dots Loader */
+.typing-loader {
+  display: flex;
+  gap: 10px;
 }
 
-@keyframes wave {
-  0%   { transform: translateX(0) rotate(0deg); }
-  50%  { transform: translateX(-25%) rotate(180deg); }
-  100% { transform: translateX(0) rotate(360deg); }
+.typing-loader span {
+  width: 15px;
+  height: 15px;
+  background: #38bdf8;
+  border-radius: 50%;
+  animation: bounce 0.6s infinite alternate;
+  box-shadow: 0 0 10px #38bdf8, 0 0 20px #9333ea;
+}
+
+.typing-loader span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-loader span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); opacity: 0.6; }
+  to { transform: translateY(-15px); opacity: 1; }
 }
 
 /* Loader Text */
 .loader-text {
-  position: relative;
+  margin-top: 20px;
   color: #f1f5f9;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  z-index: 10;
-  animation: fadePulse 2s infinite alternate;
+  animation: fadePulse 1.5s infinite alternate;
 }
 
 @keyframes fadePulse {
-  from { opacity: 0.4; transform: scale(0.95); }
-  to   { opacity: 1; transform: scale(1.05); }
+  from { opacity: 0.5; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1.05); }
 }
 
 /* Hero Section */
