@@ -397,7 +397,28 @@
 
   <!-- External JavaScript -->
   <script src="index.js"></script>
+
+  <!-- Loader -->
+<div id="loader">
+  <div class="loader-logo">Alex Moseti</div>
+  <div class="progress-bar">
+    <span></span>
+  </div>
+  <p class="loader-text">Preparing your experience...</p>
+</div>
+
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+
+    // Wait for progress bar to complete
+    setTimeout(() => {
+      loader.classList.add("hidden");
+    }, 3500); // matches progress bar duration
+  });
+</script>
   
 
 </body>
 </html>
+
